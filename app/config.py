@@ -16,16 +16,3 @@ class Settings(BaseSettings):
         env_file = ".env"
 
 settings = Settings()
-```
-
----
-
-## File 2: `app/templates/predict.html` — only line 30
-
-Find:
-```
-{{ info.name }} — {{ info.type }}{% if info.default %} ★{% endif %}
-```
-Replace with:
-```
-{{ info.name }}{% if info.default %} ★{% endif %}
